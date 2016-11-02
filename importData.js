@@ -37,18 +37,18 @@ var setRule = function(ob) {
   {
     id: A1,
     users: [
-           {id: "A2", parentId: "A1",group: 1,isManager: 1,isLocked: 0, rules: ["Admin Manager" , "Client Manager"]},
-           {id: "A3", parentId: "A1",group: 1,isManager: 0,isLocked: 0, rules: ["Admin View" , "Client Manager"]},
-           {id: "A4", parentId: "A1",group: 1,isManager: 1,isLocked: 1, rules: ["Admin Lock" , "Client Lock"]},
+           {id: "A2", idParent: "A1",group: 1,isManager: 1,isLocked: 0, rules: ["Admin Manager" , "Client Manager"]},
+           {id: "A3", idParent: "A1",group: 1,isManager: 0,isLocked: 0, rules: ["Admin View" , "Client Manager"]},
+           {id: "A4", idParent: "A1",group: 1,isManager: 1,isLocked: 1, rules: ["Admin Lock" , "Client Lock"]},
     ],
     group: 1,
     isManager: 1,
     isLocked: 0,
     rules: ["Admin Manager" , "Client Manager"]
   },
-  {id: "A2", parentId: "A1",group: 1,isManager: 1,isLocked: 0, rules: ["Admin Manager" , "Client Manager"]},
-  {id: "A3", parentId: "A1",group: 1,isManager: 0,isLocked: 0, rules: ["Admin View" , "Client Manager"]},
-  {id: "A4", parentId: "A1",group: 1,isManager: 1,isLocked: 1, rules: ["Admin Lock" , "Client Lock"]},
+  {id: "A2", idParent: "A1",group: 1,isManager: 1,isLocked: 0, rules: ["Admin Manager" , "Client Manager"]},
+  {id: "A3", idParent: "A1",group: 1,isManager: 0,isLocked: 0, rules: ["Admin View" , "Client Manager"]},
+  {id: "A4", idParent: "A1",group: 1,isManager: 1,isLocked: 1, rules: ["Admin Lock" , "Client Lock"]},
 ]
 
  */

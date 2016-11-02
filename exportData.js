@@ -4,7 +4,7 @@ var file = './data.json';
 var index = {};
 var data = [];
 
-var totalUsers = 1000000;
+var totalUsers = 1000;
 
 var templateAdmin = function(id) {
     return {
@@ -45,9 +45,9 @@ for(i=1;i<=totalUsers;i++){
 
 [
   {id: "A1", group: 1, isManager: 1, isLocked: 0},
-  {id: "A2", parentId: "A1", group: 1,isManager: 1,isLocked: 0},
-  {id: "A3", parentId: "A1", group: 1,isManager: 1,isLocked: 0},
-  {id: "A4", parentId: "A1", group: 1,isManager: 1,isLocked: 1},
+  {id: "A2", idParent: "A1", group: 1,isManager: 1,isLocked: 0},
+  {id: "A3", idParent: "A1", group: 1,isManager: 1,isLocked: 0},
+  {id: "A4", idParent: "A1", group: 1,isManager: 1,isLocked: 1},
 ]
 
  */
