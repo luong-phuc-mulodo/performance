@@ -41,6 +41,17 @@ for(i=1;i<=totalUsers;i++){
     data.push(templateClient(idClient,idAdmin));
 }
 
+/*
+
+[
+  {id: "A1", group: 1, isManager: 1, isLocked: 0},
+  {id: "A2", parentId: "A1", group: 1,isManager: 1,isLocked: 0},
+  {id: "A3", parentId: "A1", group: 1,isManager: 1,isLocked: 0},
+  {id: "A4", parentId: "A1", group: 1,isManager: 1,isLocked: 1},
+]
+
+ */
+
 jsonfile.writeFile(file, data, function (err) {
   console.error(err);
 });

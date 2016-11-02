@@ -15,26 +15,27 @@ var check = {
 
 var convertData = function(data){
     var index = {};
-    data.forEach(function(item){
+    data.forEach(function(item,i){
         item["rules"] = check[item.group.toString() + item.isManager.toString() + item.isLocked.toString()];
         if(!item.idParent)
             item.users = [];
-        index[item.id] = item;
+        index[item.id] = data[i];
     });
     data.forEach(function(item){
         if(item.idParent)
             index[item.idParent].users.push(item);
     });
-    return index;
+    console.log("FINISH CONVERT DATA : " + new Date().toLocaleString());
+    return data;
 };
 
 
-console.log(new Date().toLocaleString());
 jsonfile.readFile(file, function(err, obj) {
   if(!err){
+    console.log("START CONVERT DATA : " + new Date().toLocaleString());
     jsonfile.writeFile(output, convertData(obj), function (err) {
         if(!err)
-            console.log(new Date().toLocaleString());
+            console.log("FINISH WRITE FILE : " + new Date().toLocaleString());
     });
   }
 });
