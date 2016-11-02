@@ -13,10 +13,15 @@ var check = {
     "201": ["Admin Lock" , "Client Lock"]
 };
 
+var setRule = function(ob){
+    ob.rules = check[ob.group.toString() + ob.isManager.toString() + ob.isLocked.toString()];
+    return;
+}
+
 var convertData = function(data){
     var index = {};
     data.forEach(function(item,i){
-        item["rules"] = check[item.group.toString() + item.isManager.toString() + item.isLocked.toString()];
+        setRule(item);
         if(!item.idParent)
             item.users = [];
         index[item.id] = data[i];
